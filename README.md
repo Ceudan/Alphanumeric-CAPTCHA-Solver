@@ -162,6 +162,7 @@ The team split the generated dataset into training, validation and test sets. A 
 
 Figure 14: Character class frequency of test set
 &nbsp;
+
 Overall, the model performed well and is generalizing well as both validation accuracy and test accuracy were similar. Reiterating Section 8.0, the final model achieved a CAPTCHA accuracy of 71% and a character accuracy of 90.67%.
  
 ## 10.0 Discussion
