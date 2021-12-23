@@ -2,27 +2,27 @@
 Authors: Nicholas Leung, Pranavbhai Patel, Ray Coden Mercurius, Ravi Singh
  
 ## Table of Contents
-1.0 Introduction	/
-2.0 Illustration / Figure	2
-3.0 Background & Related Work	3
-4.0 Data Processing	4
-4.1 Dataset Generation	4
-4.2 Preprocessing	5
-4.3 Segmentation Dataset	6
-5.0 Architecture	6
-5.1 Character Segmentation	6
-5.2 Primary Classifier	7
-6.0 Baseline Model	8
-7.0 Quantitative Results	8
-7.1 Segmentation Error	8
-7.2 Classification Accuracy	9
-8.0 Qualitative Results	9
-9.0 Model Evaluation	11
-10.0 Discussion	12
-11.0 Ethical Considerations	13
-12.0 Project Difficulty / Quality	13
-References	14
-Appendix A: Attribution Table	15
+1.0 Introduction	\
+2.0 Illustration / Figure	\
+3.0 Background & Related Work	\
+4.0 Data Processing	\
+4.1 Dataset Generation	
+4.2 Preprocessing	\
+4.3 Segmentation Dataset	\
+5.0 Architecture	\
+5.1 Character Segmentation	\
+5.2 Primary Classifier	\
+6.0 Baseline Model	\
+7.0 Quantitative Results	\
+7.1 Segmentation Error	\
+7.2 Classification Accuracy	\
+8.0 Qualitative Results	\
+9.0 Model Evaluation	\
+10.0 Discussion	\
+11.0 Ethical Considerations	\
+12.0 Project Difficulty / Quality	\
+References	\
+Appendix A: Attribution Table	\
 
 1.0 Introduction
 Web security has become essential to the safety of its users and the reliability of its services. CAPTCHA tests often safeguard online resources from non-human user access and exploitation. CAPTCHA stands for “Completely Automated Public Turing test to tell Computers and Humans Apart”. It is a challenge-response test that prompts users to input an alphanumeric string based on a distorted image to confirm their authenticity, shown in Figure 1.
