@@ -2,25 +2,25 @@
 Authors: Nicholas Leung, Pranavbhai Patel, Ray Coden Mercurius, Ravi Singh
  
 ## Table of Contents
-1.0  Introduction	\
-2.0  Illustration / Figure	\
-3.0  Background & Related Work	\
-4.0  Data Processing	\
-4.1  Dataset Generation	
-4.2  Preprocessing	\
-4.3  Segmentation Dataset	\
-5.0  Architecture	\
-5.1  Character Segmentation	\
-5.2  Primary Classifier	\
-6.0  Baseline Model	\
-7.0  Quantitative Results	\
-7.1  Segmentation Error	\
-7.2  Classification Accuracy	\
-8.0  Qualitative Results	\
-9.0  Model Evaluation	\
-10.0  Discussion	\
-11.0  Ethical Considerations	\
-12.0  Project Difficulty / Quality	\
+1.0  Introduction	\
+2.0  Illustration / Figure	\
+3.0  Background & Related Work	\
+4.0  Data Processing	\
+4.1  Dataset Generation	
+4.2  Preprocessing	\
+4.3  Segmentation Dataset	\
+5.0  Architecture	\
+5.1  Character Segmentation	\
+5.2  Primary Classifier	\
+6.0  Baseline Model	\
+7.0  Quantitative Results	\
+7.1  Segmentation Error	\
+7.2  Classification Accuracy	\
+8.0  Qualitative Results	\
+9.0  Model Evaluation	\
+10.0  Discussion	\
+11.0  Ethical Considerations	\
+12.0  Project Difficulty / Quality	\
 References	\
 Appendix A: Attribution Table	\
 
