@@ -1,14 +1,5 @@
-#CAPTCHA Bypass
+# CAPTCHA Bypass
 Authors:Nicholas Leung, Pranavbhai Patel, Ray Coden Mercurius, Ravi Singh
- 
-Word Count: 2,214 (no penalty)
-Github Link: https://github.com/natanleung/APS360-captcha-bypass
- 
- 
- 
- 
- 
- 
  
 Table of Contents
 1.0 Introduction	2
