@@ -26,7 +26,8 @@ Figure 1: Online CAPTCHA Turing test sample
 &nbsp;
 
 However, CAPTCHA as a web security standard has become obsolete and susceptible to computer vision attacks, and has since been replaced by reCAPTCHA [1]. This development motivates the team’s efforts and interests to develop a CAPTCHA bypass system using machine learning methods.
-\ The problem can be reduced to a multiclass classification problem coupled with object detection. First, each individual character in the CAPTCHA string is segmented and isolated. Next, each segmented image, of only a single character, is passed into the optical character recognition (OCR) model for classification into the predefined character space. A final guess is then formulated.
+\
+The problem can be reduced to a multiclass classification problem coupled with object detection. First, each individual character in the CAPTCHA string is segmented and isolated. Next, each segmented image, of only a single character, is passed into the optical character recognition (OCR) model for classification into the predefined character space. A final guess is then formulated.
 
 ## 2.0 Illustration / Figure
 
