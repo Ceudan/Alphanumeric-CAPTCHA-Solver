@@ -156,5 +156,5 @@ Qualitative Results: Leung \
 Model Evaluation: Patel \
 Discussion: Singh \
 Ethical Considerations: Mercurius \
-Project Difficulty/Quality: Leung \
+Project Difficulty/Quality: Leung 
 
