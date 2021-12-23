@@ -1,18 +1,5 @@
- 
- 
- 
- 
- 
- 
-CAPTCHA Bypass: Project Final Report (Part A: Group)
-APS360: Applied Fundamentals of Machine Learning
-April 9, 2021
- 
-Project Team 99
-Nicholas Leung
-Pranavbhai Patel
-Coden Mercurius
-Ravi Singh
+#CAPTCHA Bypass
+Authors:Nicholas Leung, Pranavbhai Patel, Ray Coden Mercurius, Ravi Singh
  
 Word Count: 2,214 (no penalty)
 Github Link: https://github.com/natanleung/APS360-captcha-bypass
