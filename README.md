@@ -137,11 +137,11 @@ The broad variation of input makes a static segmentation strategy ineffective. A
 The primary CNN classification model performs well, attaining a test accuracy of 71%. However, the team implemented redundancy into the project plan and also developed baseline SVM and AlexNet transfer learning models. If the primary model yielded insufficient results, there were backup models to pursue.
 In summary, the project is an end-to-end architecture that successfully performs CAPTCHA bypass. The key challenges of the project were the deep learning segmentation module and custom dataset, and robustness was added via the classification model redundancy.
 
-References
-[1] E. Bursztein, J. Aigrain, A. Moscicki, and J. Mitchell, “The End is Nigh: Generic Solving of Text-based CAPTCHAs,” USENIX. https://www.usenix.org/system/files/conference/woot14/woot14-bursztein.pdf.
-[2] Z. Noury and M. Rezaei, “Deep-CAPTCHA: a deep learning based CAPTCHA solver for vulnerability assessment,” arXiv.org, Jun. 24, 2020. https://arxiv.org/pdf/2006.08296.pdf.
-[3] H. Yang, “Captcha,” Github, May 13, 2020. https://github.com/lepture/captcha?fbclid=IwAR3eYlx5VzJYktuNmCg0shB3D4OAaquybyVfWpDlpKuWPYvjjTa-NUT8RvA.
-[4] M. T. Elahi, “Algorithm and concept behind finding contour in OpenCV,” Researchgate, 13-Aug-2016. [Online]. Available: https://www.researchgate.net/post/What_is_the_algorithm_and_concept_behind_finding_contour_in_openCV  [Accessed: 22-Mar-2021]
+### References
+[1] E. Bursztein, J. Aigrain, A. Moscicki, and J. Mitchell, “The End is Nigh: Generic Solving of Text-based CAPTCHAs,” USENIX.\ https://www.usenix.org/system/files/conference/woot14/woot14-bursztein.pdf.\
+[2] Z. Noury and M. Rezaei, “Deep-CAPTCHA: a deep learning based CAPTCHA solver for vulnerability assessment,” arXiv.org, Jun. 24, 2020. https://arxiv.org/pdf/2006.08296.pdf.\
+[3] H. Yang, “Captcha,” Github, May 13, 2020. https://github.com/lepture/captcha?fbclid=IwAR3eYlx5VzJYktuNmCg0shB3D4OAaquybyVfWpDlpKuWPYvjjTa-NUT8RvA.\
+[4] M. T. Elahi, “Algorithm and concept behind finding contour in OpenCV,” Researchgate, 13-Aug-2016. [Online]. Available: https://www.researchgate.net/post/What_is_the_algorithm_and_concept_behind_finding_contour_in_openCV  [Accessed: 22-Mar-2021]\
 
  
 Appendix A: Attribution Table
