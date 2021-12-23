@@ -1,5 +1,5 @@
 # CAPTCHA Bypass
-Authors:Nicholas Leung, Pranavbhai Patel, Ray Coden Mercurius, Ravi Singh
+Authors: Nicholas Leung, Pranavbhai Patel, Ray Coden Mercurius, Ravi Singh
  
 Table of Contents
 1.0 Introduction	2
