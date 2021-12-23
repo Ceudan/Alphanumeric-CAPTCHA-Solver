@@ -144,33 +144,17 @@ In summary, the project is an end-to-end architecture that successfully performs
 [4] M. T. Elahi, “Algorithm and concept behind finding contour in OpenCV,” Researchgate, 13-Aug-2016. [Online]. Available: https://www.researchgate.net/post/What_is_the_algorithm_and_concept_behind_finding_contour_in_openCV  [Accessed: 22-Mar-2021] \
 
  
-Appendix A: Attribution Table
-Task
-Assignee
-Introduction
-Singh
-Illustration / Figure
-Patel
-Background & Related Work
-Singh
-Data Processing
-Patel / Mercurius
-Architecture
-Singh / Mercurius
-Baseline Model
-Patel / Mercurius
-Quantitative Results
-Leung
-Qualitative Results
-Leung
-Model Evaluation
-Patel
-Discussion
-Singh
-Ethical Considerations
-Mercurius
-Project Difficulty / Quality
-Leung
-
-Table 3: Project Final Report Tasks
+### Attribution Table
+Introduction: Singh \
+Illustration/Figure: Patel \
+Background & Related Work: Singh \
+Data Processing: Patel/Mercurius \
+Architecture: Singh/Mercurius \
+Baseline Model: Patel/Mercurius \
+Quantitative Results: Leung \
+Qualitative Results: Leung \
+Model Evaluation: Patel \
+Discussion: Singh \
+Ethical Considerations: Mercurius \
+Project Difficulty/Quality: Leung \
 
