@@ -119,7 +119,6 @@ Figure 11: Equal-width splitting heuristic for overlapping characters.
 | Baseline (equal widths) |            4.5%           |             6.1%            |
 
 Table 1: Average character segmentation error.
-\
 &nbsp;
 
 Split error represents the percentage difference of the segmented character width from the true partition. The baseline model simply partitions overlapping characters evenly. The primary model has a CNN architecture and demonstrated more precise partitioning, which translates to improved classification.
@@ -134,7 +133,6 @@ Split error represents the percentage difference of the segmented character widt
 | AlexNet (Transfer Learning) |       82.43%       |      45.23%      |
 
 Table 2: Character and CAPTCHA accuracies of each classification model.
-\
 &nbsp;
 
 The values from Table 2 were obtained experimentally for each model against the custom-generated test dataset, showing that the primary CNN model has the best performance.
@@ -164,10 +162,17 @@ Overall, the model performed well and is generalizing well as both validation ac
  
 ## 10.0 Discussion
 Despite achieving high character accuracy, the model underperforms in terms of CAPTCHA accuracy. This can be attributed to three main factors: compounding probabilities, segmentation issues, and character similarities.
+&nbsp;
+
 Compounding probabilities refers to the fact that character accuracy is not synonymous with CAPTCHA accuracy. For an N-length CAPTCHA string to be decoded, the model must correctly identify the N characters consecutively. This varies exponentially in proportion to character accuracy. For example, given a 90% character accuracy we would expect to see approximately a 60% CAPTCHA accuracy (0.95).
+\
 Character accuracy is also affected by similarities between characters. Consider the number “0” and the letter “O”. These characters are nearly identical, and it would make sense that they would be difficult for the model to distinguish. This is further proven by the confusion matrix, which depicts that most of the incorrect guesses were misclassifications of a “0” as an “O”, or vice versa.
+\
 Lastly, segmentation is a nontrivial problem. In the case of overlapping characters, regardless of how the image is sliced, vital character information is lost. In Figure 16, we observe that the letters “A” and “W” are overlapping. Depending on the slice taken, we would end up with letters that look like “F” and “W” or “A” and “N”. In either case, we would have to sacrifice the correct guess for one of the letters, which would ultimately result in an incorrect CAPTCHA guess.
+&nbsp;
+
 We learned how to effectively debug a complex machine learning system. Though the general procedure was similar to other software practices, the means by which it is done, e.g. confusion matrix, are different. They provide valuable insight into the model and/or data flaws.
+\
 In terms of future improvements, adding another layer to allow for the detection of extra features may resolve the confusion between similar characters such as “0” and “O.” Alternatively, a more robust segmentation model that performs non-vertical slices, as shown below in Figure 15, may also be worthwhile.
 
 ![Image showing a CAPTCHA characters that could have been better split using a diagonal slice](images/non_vertical_slice.png) 
@@ -177,11 +182,18 @@ Figure 15: Example of a more accurate non-vertical slice.
  
 ## 11.0 Ethical Considerations
 The design is malicious in its intent to autonomously bypass a web security mechanism. It can be leveraged as a hacking tool which jeopardizes online user privacy and safety.
+\
 Fortunately, the CAPTCHA generator and premade dataset are outdated (2015 and 2018 respectively). Since 2007, traditional text-based CAPTCHA has been widely replaced by the superior reCAPTCHA (Version 3). Thus, the ethical considerations of the project are outdated because CAPTCHA (Version 1) is no longer the Internet standard.
 ## 12.0 Project Difficulty / Quality
 The solution to CAPTCHA bypass has two main components: segmentation and classification. Segmentation, or partitioning the CAPTCHA image into individual characters, is challenging because CAPTCHA images vary in terms of rotation, distance, font size, and noise. Multiclass classification for character recognition is simpler, however the sheer number of output classes (36) complicates the task.
+&nbsp;
+
 The broad variation of input makes a static segmentation strategy ineffective. As a result, Mercurius developed a CNN model to perform more precise vertical partitions. Yet, the model still struggled to split adjacent characters with significant overlap or rotation, that cannot be partitioned vertically.
+&nbsp;
+
 The primary CNN classification model performs well, attaining a test accuracy of 71%. However, the team implemented redundancy into the project plan and also developed baseline SVM and AlexNet transfer learning models. If the primary model yielded insufficient results, there were backup models to pursue.
+&nbsp;
+
 In summary, the project is an end-to-end architecture that successfully performs CAPTCHA bypass. The key challenges of the project were the deep learning segmentation module and custom dataset, and robustness was added via the classification model redundancy.
 
 ### References
