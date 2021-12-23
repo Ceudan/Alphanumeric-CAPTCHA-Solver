@@ -2,7 +2,7 @@
 Authors: Nicholas Leung, Pranavbhai Patel, Ray Coden Mercurius, Ravi Singh
  
 ## Table of Contents
-1.0 Introduction	2
+1.0 Introduction	/
 2.0 Illustration / Figure	2
 3.0 Background & Related Work	3
 4.0 Data Processing	4
