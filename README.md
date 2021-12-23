@@ -151,7 +151,7 @@ Figure 12: Confusion matrix of primary model on test dataset
 &nbsp;
 An end-to-end system was developed as an interface for the CAPTCHA bypass model. This allows users to provide a single CAPTCHA image as input to obtain the decoded string as output. The model proved fairly capable and reliably decodes separate, distinguishable CAPTCHA characters. On the other hand, the model can struggle when provided overlapping, ambiguous characters. Examples of both cases, correct (left) and incorrect (right) predictions, can be seen in Figure 13. The “MBRRU” string is more readable than the “4AWFY” string because the “AW” are overlapping.
 
-![Image of example CAPTCHA image inputs and ouput predictions](images/CAPTCHA_output_1.png)(images/CAPTCHA_OUTPUT_2.png) 
+![Image of example CAPTCHA image inputs and ouput predictions](images/CAPTCHA_output_1.png) ![Image of example CAPTCHA image inputs and ouput predictions](images/CAPTCHA_OUTPUT_2.png) 
 
 Figure 13: CAPTCHA predictions
 &nbsp;
@@ -160,7 +160,7 @@ The team split the generated dataset into training, validation and test sets. A 
 
 ![Image showing frequency of alphanumeric characters in test data](images/character_frequecy_of_test_set.png) 
 
-Figure 14: Character class frequency of test set.
+Figure 14: Character class frequency of test set
 &nbsp;
 Overall, the model performed well and is generalizing well as both validation accuracy and test accuracy were similar. Reiterating Section 8.0, the final model achieved a CAPTCHA accuracy of 71% and a character accuracy of 90.67%.
  
