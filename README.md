@@ -145,16 +145,18 @@ In summary, the project is an end-to-end architecture that successfully performs
 
  
 ### Attribution Table
-Introduction: Singh \
-Illustration/Figure: Patel \
-Background & Related Work: Singh \
-Data Processing: Patel/Mercurius \
-Architecture: Singh/Mercurius \
-Baseline Model: Patel/Mercurius \
-Quantitative Results: Leung \
-Qualitative Results: Leung \
-Model Evaluation: Patel \
-Discussion: Singh \
-Ethical Considerations: Mercurius \
-Project Difficulty/Quality: Leung 
+|             Task             |      Assignee     |
+|:----------------------------:|:-----------------:|
+|         Introduction         |       Singh       |
+|     Illustration / Figure    |       Patel       |
+|   Background & Related Work  |       Singh       |
+|        Data Processing       | Patel / Mercurius |
+|         Architecture         | Singh / Mercurius |
+|        Baseline Model        | Patel / Mercurius |
+|     Quantitative Results     |       Leung       |
+|      Qualitative Results     |       Leung       |
+|       Model Evaluation       |       Patel       |
+|          Discussion          |       Singh       |
+|    Ethical Considerations    |     Mercurius     |
+| Project Difficulty / Quality |       Leung       |
 
