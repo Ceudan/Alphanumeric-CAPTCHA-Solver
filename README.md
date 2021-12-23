@@ -15,7 +15,7 @@ Authors: Nicholas Leung, Pranavbhai Patel, Ray Coden Mercurius, Ravi Singh
 11.0  Ethical Considerations	\
 12.0  Project Difficulty / Quality	\
 References	\
-Attribution Table	\
+Attribution Table
 
 ## 1.0 Introduction
 Web security has become essential to the safety of its users and the reliability of its services. CAPTCHA tests often safeguard online resources from non-human user access and exploitation. CAPTCHA stands for “Completely Automated Public Turing test to tell Computers and Humans Apart”. It is a challenge-response test that prompts users to input an alphanumeric string based on a distorted image to confirm their authenticity, shown in Figure 1.
