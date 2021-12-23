@@ -57,10 +57,12 @@ Importance was placed on dataset selection to maximize model generalizability an
 ### 4.1 Dataset Generation
 CAPTCHAs can vary in terms of character rotation, distance, font size, and added noise. Thus, a large dataset is needed to generalize to any CAPTCHA. The team decided to generate their own custom dataset using an open-source CAPTCHA generator [3]. This is because existing datasets were limited in character space, unbalanced in representation, and number of samples.
 Dataset Characteristics:
-Alphanumeric character space, 36 classes (A-Z, 0-9).
-~15,000 samples, examples shown in Figure 5.
-~2,000 character samples per class, seen in Figure 6.
-70/15/15 training/validation/test split.
+/
+
+- Alphanumeric character space, 36 classes (A-Z, 0-9).
+- ~15,000 samples, examples shown in Figure 5.
+- ~2,000 character samples per class, seen in Figure 6.
+- 70/15/15 training/validation/test split.
 
 ![Image of sample CAPTCHAs from dataset](images/sample_captchas_from_dataset.png)
 
@@ -111,36 +113,30 @@ Figure 11: Equal-width splitting heuristic for overlapping characters.
 &nbsp;
 ## 7.0 Quantitative Results
 ### 7.1 Segmentation Error
-Model
-Two-Character Split Error
-Three-Character Split Error
-Primary (CNN)
-3.1%
-4.4%
-Baseline (equal widths)
-4.5%
-6.1%
+|          Model          | Two-Character Split Error | Three-Character Split Error |
+|:-----------------------:|:-------------------------:|:---------------------------:|
+|      Primary (CNN)      |            3.1%           |             4.4%            |
+| Baseline (equal widths) |            4.5%           |             6.1%            |
 
 Table 1: Average character segmentation error.
+\
+&nbsp;
+
 Split error represents the percentage difference of the segmented character width from the true partition. The baseline model simply partitions overlapping characters evenly. The primary model has a CNN architecture and demonstrated more precise partitioning, which translates to improved classification.
  
  
  
 ### 7.2 Classification Accuracy
-Model
-Character Accuracy
-CAPTCHA Accuracy
-Primary (CNN)
-90.67%
-71.00%
-Baseline (SVM)
-83.84%
-51.73%
-AlexNet (Transfer Learning)
-82.43%
-45.23%
+|            Model            | Character Accuracy | CAPTCHA Accuracy |
+|:---------------------------:|:------------------:|:----------------:|
+|        Primary (CNN)        |       90.67%       |      71.00%      |
+|        Baseline (SVM)       |       83.84%       |      51.73%      |
+| AlexNet (Transfer Learning) |       82.43%       |      45.23%      |
 
 Table 2: Character and CAPTCHA accuracies of each classification model.
+\
+&nbsp;
+
 The values from Table 2 were obtained experimentally for each model against the custom-generated test dataset, showing that the primary CNN model has the best performance.
 Both accuracies are important to the CAPTCHA bypass system. The character accuracy represents the percentage of individual characters correctly identified. The CAPTCHA accuracy represents the percentage of CAPTCHA strings (five characters) correctly identified. This allows the team to evaluate the model in a non-binary fashion. For example, a model that always predicts four of the five CAPTCHA characters correctly would receive a 0% CAPTCHA accuracy. This is a skewed analysis because the model is not credited for its 80% character accuracy.
 ## 8.0 Qualitative Results
