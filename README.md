@@ -82,6 +82,7 @@ Figure 7: Visualization of CAPTCHA image preprocessing.
 An additional dataset was leveraged to implement the segmentation module. This dataset consisted of ~1,500 manually labelled character samples in which segmentation is nontrivial. We accelerated labelling by creating a labelling script as seen in Figure 8. Labels describe the correct horizontal distance at which to cut.
 
 ![Image showing data labelling process used to generate custom dataset](images/labelling_program.png)
+
 Figure 8: Data labelling program used for segmentation dataset.
 &nbsp;
 ## 5.0 Architecture
@@ -89,16 +90,21 @@ Figure 8: Data labelling program used for segmentation dataset.
 Preprocessed CAPTCHA images are passed into cv2.findContours()[4] to draw bounding boxes around every object, but sometimes overlapping characters are grouped together. These are passed into the splitting model for further segmentation. At this point, the CAPTCHA is partitioned into five normalized, grayscale images.
 The splitting model consists of four pairs of convolutional and max pooling layers, followed by two linear fully-connected layers. The model input is a bounding box containing overlapping characters. The output of the model is a 1x(N-1) set of coordinates at which to partition the image where N is the number of characters in the bounding box. The architecture is shown in Figure 9.
  
+![Image showing the architecture of the splitting model](images/splitting_model_architecture.png)
 
 Figure 9: Architecture of Splitting Model
 &nbsp;
 ### 5.2 Primary Classifier
 The primary classifier consists of two pairs of convolutional and max pooling layers, followed by three linear fully-connected layers. Between the first two fully-connected layers, the team used dropout to reduce overfitting. The model input is a 1x80x80 grayscale image produced from the character segmentation model. The output of the model is a 1x36 distribution of probabilities. The 36 output classes are a result of the team constraining the CAPTCHA input to only include alphanumeric characters (0-9, A-Z). The architecture is shown in Figure 10.
 
+![Image showing architecture of the character classifier](images/primary_classifier_architecture.png)
+
 Figure 10: Primary classifier architecture
 &nbsp;
 ## 6.0 Baseline Model
 Like the primary model, the baseline model is also composed of a segmentation module and a classification module. The segmentation module leverages the same contouring approach, but when overlapping characters are captured within the same bounding box, the box is split into uniform segments as shown in Figure 11. The classification module uses SVM techniques to identify characters. This baseline model is suitable as it provides a comparison for the effectiveness of deep-learning in performing CAPTCHA bypass.
+
+![Image of 2 overlapping characters being split vertically down the center of the image](images/equal_width_splitting_heuristic.png)
 
 Figure 11: Equal-width splitting heuristic for overlapping characters.
 &nbsp;
@@ -139,14 +145,20 @@ Both accuracies are important to the CAPTCHA bypass system. The character accura
 ## 8.0 Qualitative Results
 Overall, the experimental results were positive. The model was able to demonstrate the ability to semi-consistently read CAPTCHA images and output the corresponding character string. Figure 12 shows the confusion matrix generated from the primary model against the test dataset. The blue squares indicate high frequency of occurrences and gray squares indicate low frequency of occurrences. The blue squares along the diagonal of the matrix signify correct predictions. The most common error was the misinterpretation of the characters “O” and “0” (zero), which is reasonable given their similar lettering.
 
+![Image of final test confusion matrix](images/confusion_matrix.png)
+
 Figure 12: Confusion matrix of primary model on test dataset
 &nbsp;
 An end-to-end system was developed as an interface for the CAPTCHA bypass model. This allows users to provide a single CAPTCHA image as input to obtain the decoded string as output. The model proved fairly capable and reliably decodes separate, distinguishable CAPTCHA characters. On the other hand, the model can struggle when provided overlapping, ambiguous characters. Examples of both cases, correct (left) and incorrect (right) predictions, can be seen in Figure 13. The “MBRRU” string is more readable than the “4AWFY” string because the “AW” are overlapping.
+
+![Image of example CAPTCHA image inputs and ouput predictions](images/CAPTCHA_output_1.png)(images/CAPTCHA_OUTPUT_2.png) 
 
 Figure 13: CAPTCHA predictions
 &nbsp;
 ## 9.0 Model Evaluation 
 The team split the generated dataset into training, validation and test sets. A 70/15/15 random split was performed, resulting in the test dataset having roughly 2,250 CAPTCHAs. Since single-character classification heavily affects CAPTCHA accuracy, the model’s performance on the new data is valid only if the data has equal character representation. For example, if the test set lacked CAPTCHAs containing “0” or “O”, the accuracy would be higher than the true performance of the model. We ensure this is not the case and that all characters are represented as seen in Figure 14. The test set has the additional benefit of having new CAPTCHA values. For example, if “ABCDE” is a CAPTCHA string in the training set, that sequence is guaranteed to not appear in the test set. This property helps prove the generalizability of the model, specifically that it works on new character permutations. This is important because for a five-character CAPTCHA with an alphanumeric character set, there are over 60 million permutations.
+
+![Image showing frequency of alphanumeric characters in test data](images/character_frequecy_of_test_set.png) 
 
 Figure 14: Character class frequency of test set.
 &nbsp;
@@ -159,6 +171,8 @@ Character accuracy is also affected by similarities between characters. Consider
 Lastly, segmentation is a nontrivial problem. In the case of overlapping characters, regardless of how the image is sliced, vital character information is lost. In Figure 16, we observe that the letters “A” and “W” are overlapping. Depending on the slice taken, we would end up with letters that look like “F” and “W” or “A” and “N”. In either case, we would have to sacrifice the correct guess for one of the letters, which would ultimately result in an incorrect CAPTCHA guess.
 We learned how to effectively debug a complex machine learning system. Though the general procedure was similar to other software practices, the means by which it is done, e.g. confusion matrix, are different. They provide valuable insight into the model and/or data flaws.
 In terms of future improvements, adding another layer to allow for the detection of extra features may resolve the confusion between similar characters such as “0” and “O.” Alternatively, a more robust segmentation model that performs non-vertical slices, as shown below in Figure 15, may also be worthwhile.
+
+![Image showing a CAPTCHA characters that could have been better split using a diagonal slice](images/non_vertical_slice.png) 
 
 Figure 15: Example of a more accurate non-vertical slice.
 &nbsp;
