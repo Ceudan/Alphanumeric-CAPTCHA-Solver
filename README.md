@@ -19,7 +19,7 @@ Attribution Table
 
 ## 1.0 Introduction
 Web security has become essential to the safety of its users and the reliability of its services. CAPTCHA tests often safeguard online resources from non-human user access and exploitation. CAPTCHA stands for “Completely Automated Public Turing test to tell Computers and Humans Apart”. It is a challenge-response test that prompts users to input an alphanumeric string based on a distorted image to confirm their authenticity, shown in Figure 1.
-![Image of a CAPTCHA turing test on the Internet](Images/CAPTCHA online.png)
+![Image of a CAPTCHA turing test on the Internet](Images/CAPTCHA OUTPUT 2.png)
 Figure 1: CAPTCHA sample \
 However, CAPTCHA as a web security standard has become obsolete and susceptible to computer vision attacks, and has since been replaced by reCAPTCHA [1]. This development motivates the team’s efforts and interests to develop a CAPTCHA bypass system using machine learning methods.
 The problem can be reduced to a multiclass classification problem coupled with object detection. First, each individual character in the CAPTCHA string is segmented and isolated. Next, each segmented image, of only a single character, is passed into the optical character recognition (OCR) model for classification into the predefined character space. A final guess is then formulated.
