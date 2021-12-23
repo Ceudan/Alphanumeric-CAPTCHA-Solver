@@ -66,7 +66,7 @@ Alphanumeric character space, 36 classes (A-Z, 0-9).
 Figure 5: Sample CAPTCHAs from generated dataset
 &nbsp;
 
-![Image showing frequency of each alphanumeric character in dataset](images/sample_captchas_from_dataset.png)
+![Image showing frequency of each alphanumeric character in dataset](images/class_representation_of_dataset.png)
 
 Figure 6: Class representation of generated dataset
 &nbsp;
