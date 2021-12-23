@@ -21,7 +21,6 @@ Attribution Table
 Web security has become essential to the safety of its users and the reliability of its services. CAPTCHA tests often safeguard online resources from non-human user access and exploitation. CAPTCHA stands for “Completely Automated Public Turing test to tell Computers and Humans Apart”. It is a challenge-response test that prompts users to input an alphanumeric string based on a distorted image to confirm their authenticity, shown in Figure 1.
 
 ![Image of a CAPTCHA turing test on the Internet](images/CAPTCHA_online.png)
-
 Figure 1: Online CAPTCHA Turing test sample
 &nbsp;
 
@@ -30,7 +29,7 @@ The problem can be reduced to a multiclass classification problem coupled with o
 
 ## 2.0 Illustration / Figure
 
-![Image of end-end system architecture](images/end_to_end_architecture.png)
+![Image of end-end system architecture](images/end_to_end_architecture.png) \
 Figure 2: End-to-end system architecture
 &nbsp;
 
