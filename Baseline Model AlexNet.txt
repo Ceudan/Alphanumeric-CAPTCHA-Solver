@@ -1,0 +1,1 @@
+The code for the baseline model AlexNet classifier (transfer learning utilizing pretrained AlexNet, followed by locally trained fully connected layers) has been lost. The original owner (nicholasykl - Github) deleted his repository.
