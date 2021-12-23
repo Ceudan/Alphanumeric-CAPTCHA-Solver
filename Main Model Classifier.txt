@@ -1,1 +1,1 @@
-The code for the main model's classifier (CNN followed by fully connected layers, along with performance analysis) has been lost. The original owner (nicholasykl - Github) deleted his repository.
+The code for the main model's classifier (CNN followed by fully connected layers) has been lost. The original owner (nicholasykl - Github) deleted his repository.
