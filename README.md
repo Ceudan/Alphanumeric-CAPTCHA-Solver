@@ -22,13 +22,17 @@ Web security has become essential to the safety of its users and the reliability
 
 ![Image of a CAPTCHA turing test on the Internet](images/CAPTCHA_online.png)
 
-Figure 1: CAPTCHA sample \
+Figure 1: Online CAPTCHA Turing test sample
+&nbsp;
+
 However, CAPTCHA as a web security standard has become obsolete and susceptible to computer vision attacks, and has since been replaced by reCAPTCHA [1]. This development motivates the team’s efforts and interests to develop a CAPTCHA bypass system using machine learning methods.
 The problem can be reduced to a multiclass classification problem coupled with object detection. First, each individual character in the CAPTCHA string is segmented and isolated. Next, each segmented image, of only a single character, is passed into the optical character recognition (OCR) model for classification into the predefined character space. A final guess is then formulated.
 
 ## 2.0 Illustration / Figure
 
+![Image of end-end system architecture](images/end_to_end_architecture.png)
 Figure 2: End-to-end system architecture
+&nbsp;
 
 ## 3.0 Background & Related Work
 Nouri and Rezai developed a customized convolutional neural network (CNN) model for CAPTCHA bypass [1]. The process can be summarized as preprocessing, encoding, and CNN processing. In the preprocessing stage, images are made uniform using image size reduction, colour space conversion, and noise reduction. The CNN consists of three alternating convolutional and max-pooling layers. From there, the output is passed through a 512-dense layer and L-separate Softmax layers, where L is the CAPTCHA code length. This customized CNN achieved a 98.94% accuracy on a test dataset of 500,000 CAPTCHA codes.
