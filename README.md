@@ -146,7 +146,7 @@ Figure 12: Confusion matrix of primary model on test dataset
 &nbsp;
 An end-to-end system was developed as an interface for the CAPTCHA bypass model. This allows users to provide a single CAPTCHA image as input to obtain the decoded string as output. The model proved fairly capable and reliably decodes separate, distinguishable CAPTCHA characters. On the other hand, the model can struggle when provided overlapping, ambiguous characters. Examples of both cases, correct (left) and incorrect (right) predictions, can be seen in Figure 13. The “MBRRU” string is more readable than the “4AWFY” string because the “AW” are overlapping.
 
-![Image of example CAPTCHA image inputs and ouput predictions](images/CAPTCHA_output_1.png) ![Image of example CAPTCHA image inputs and ouput predictions](images/CAPTCHA_OUTPUT_2.png) 
+![Image of example CAPTCHA image inputs and ouput predictions](images/CAPTCHA_output_1.png) ![Image of example CAPTCHA image inputs and ouput predictions](images/output_2.png) 
 
 Figure 13: CAPTCHA predictions
 &nbsp;
