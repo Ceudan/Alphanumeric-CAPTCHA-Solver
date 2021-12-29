@@ -207,7 +207,6 @@ In summary, the project is an end-to-end architecture that successfully performs
 |             Task             |      Assignee     |
 |:----------------------------:|:-----------------:|
 |         Introduction         |       Singh       |
-|     Illustration / Figure    |       Patel       |
 |   Background & Related Work  |       Singh       |
 |        Data Processing       | Patel / Mercurius |
 |         Architecture         | Singh / Mercurius |
