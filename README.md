@@ -112,7 +112,7 @@ Like the primary model, the baseline model is also composed of a segmentation mo
 Figure 11: Equal-width splitting heuristic for overlapping characters.
 &nbsp;
 ## 7.0 Quantitative Results
-We received a project grade of 90%. Below are some performance metrics.
+We received a project grade of 90%. Below are performance metrics.
 ### 7.1 Segmentation Error
 |          Model          | Two-Character Split Error | Three-Character Split Error |
 |:-----------------------:|:-------------------------:|:---------------------------:|
