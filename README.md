@@ -64,7 +64,7 @@ Dataset Characteristics:
 - ~2,000 character samples per class, seen in Figure 6.
 - 70/15/15 training/validation/test split.
 
-![Image of sample CAPTCHAs from dataset](images/ex_data.png)
+![Image of sample CAPTCHAs from dataset](images/ex_data.PNG)
 
 Figure 5: Sample CAPTCHAs from generated dataset
 &nbsp;
