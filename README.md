@@ -174,6 +174,9 @@ Lastly, segmentation is a nontrivial problem. In the case of overlapping charact
 
 We learned how to effectively debug a complex machine learning system. Though the general procedure was similar to other software practices, the means by which it is done, e.g. confusion matrix, are different. They provide valuable insight into the model and/or data flaws.
 \
+## 11.0 Future Works
+We were umable to test different splitting model architectures due to time constraints. We hypothesize that the splitting model is too deep and the latter layers too narrow. Firstly, since the ouput is the horizontal distance to split, it is important to preserve location information which could be lost in the max-pooling operations resultant narrow layers. Second, the splitting model is larger than our typical digit recognition model, despite the fact that it need only identify the likely position 2 digits are joined. Given we only had several thoasand training images due to custom labelling, a smaller model resistant to overfitting may have been more efficient to train.
+
 In terms of future improvements, adding another layer to allow for the detection of extra features may resolve the confusion between similar characters such as “0” and “O.” Alternatively, a more robust segmentation model that performs non-vertical slices, as shown below in Figure 15, may also be worthwhile.
 
 ![Image showing a CAPTCHA characters that could have been better split using a diagonal slice](images/ex_bad.png) 
@@ -181,11 +184,11 @@ In terms of future improvements, adding another layer to allow for the detection
 Figure 15: Example of a more accurate non-vertical slice.
 &nbsp;
  
-## 11.0 Ethical Considerations
+## 12.0 Ethical Considerations
 The design is malicious in its intent to autonomously bypass a web security mechanism. It can be leveraged as a hacking tool which jeopardizes online user privacy and safety.
 \
 Fortunately, the CAPTCHA generator and premade dataset are outdated (2015 and 2018 respectively). Since 2007, traditional text-based CAPTCHA has been widely replaced by the superior reCAPTCHA (Version 3). Thus, the ethical considerations of the project are outdated because CAPTCHA (Version 1) is no longer the Internet standard.
-## 12.0 Project Difficulty / Quality
+## 13.0 Project Difficulty / Quality
 The solution to CAPTCHA bypass has two main components: segmentation and classification. Segmentation, or partitioning the CAPTCHA image into individual characters, is challenging because CAPTCHA images vary in terms of rotation, distance, font size, and noise. Multiclass classification for character recognition is simpler, however the sheer number of output classes (36) complicates the task.
 &nbsp;
 
